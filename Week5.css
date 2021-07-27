@@ -1,0 +1,38 @@
+.container {
+  color: whitesmoke;
+  background: #000080;
+  border-radius: 10px;
+  box-shadow: 2px 5px 8px 2px rgb(0 0 0 / 10%);
+  width: 650px;
+  padding: 20px 30px;
+  margin: 20px auto;
+  font-family: "Impact Label Reversed", sans-serif;
+}
+#main-temp {
+  font-size: 50px;
+}
+#city-search {
+  display: inline;
+}
+#temp-type {
+  text-align: right;
+}
+#location-button {
+  margin-left: 10px;
+}
+.card {
+  background: #4682b4;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 10px;
+}
+.main-icon {
+  font-size: 50px;
+}
+#location-search {
+  background: #4682b4;
+  color: whitesmoke;
+}
+::placeholder {
+  color: whitesmoke;
+}
