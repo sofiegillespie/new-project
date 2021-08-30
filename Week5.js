@@ -59,6 +59,11 @@ function getHumidity(response) {
   humidityNumber.innerHTML = response.data.main.humidity;
 }
 
+function getWind(response) {
+  let windNumber = document.querySelector("#wind-speed");
+  windNumber.innerHTML = response.data.wind.speed;
+}
+
 function getCityNameUrl(response) {
   cityName = response.data.name;
   let h1 = document.querySelector("h1");
@@ -72,6 +77,7 @@ function getLocation(position) {
   axios.get(weatherUrl).then(function (response) {
     getTemp(response);
     getHumidity(response);
+    getWind(response);
   });
 }
 
