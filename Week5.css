@@ -20,6 +20,10 @@
 #location-button {
   margin-left: 10px;
 }
+.temp-container {
+  display: flex;
+  align-items: center;
+}
 .card {
   background: #4682b4;
   color: whitesmoke;

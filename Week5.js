@@ -75,6 +75,14 @@ function getWeatherDescription(response) {
   wordDescription.innerHTML = response.data.weather[0].description;
 }
 
+function getWeatherIcon(response) {
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
+}
+
 function getLocation(position) {
   let city = document.querySelector("#location-search");
   let apiKey = `0f11cd19ee1ec953a54c96fd4be0fcb4`;
@@ -84,6 +92,7 @@ function getLocation(position) {
     getHumidity(response);
     getWind(response);
     getWeatherDescription(response);
+    getWeatherIcon(response);
   });
 }
 
