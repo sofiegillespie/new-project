@@ -54,6 +54,11 @@ function getTemp(response) {
   mainTemp.innerHTML = `${celTemp}°C`;
 }
 
+function getHumidity(response) {
+  let humidityNumber = document.querySelector("#humidity-number");
+  humidityNumber.innerHTML = response.data.main.humidity;
+}
+
 function getCityNameUrl(response) {
   cityName = response.data.name;
   let h1 = document.querySelector("h1");
@@ -64,7 +69,10 @@ function getLocation(position) {
   let city = document.querySelector("#location-search");
   let apiKey = `0f11cd19ee1ec953a54c96fd4be0fcb4`;
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
-  axios.get(weatherUrl).then(getTemp);
+  axios.get(weatherUrl).then(function (response) {
+    getTemp(response);
+    getHumidity(response);
+  });
 }
 
 let celTemp = 0;
