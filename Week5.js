@@ -70,6 +70,11 @@ function getCityNameUrl(response) {
   h1.innerHTML = `${cityName}`;
 }
 
+function getWeatherDescription(response) {
+  let wordDescription = document.querySelector("#word-description");
+  wordDescription.innerHTML = response.data.weather[0].description;
+}
+
 function getLocation(position) {
   let city = document.querySelector("#location-search");
   let apiKey = `0f11cd19ee1ec953a54c96fd4be0fcb4`;
@@ -78,6 +83,7 @@ function getLocation(position) {
     getTemp(response);
     getHumidity(response);
     getWind(response);
+    getWeatherDescription(response);
   });
 }
 
