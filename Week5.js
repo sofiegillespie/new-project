@@ -100,7 +100,7 @@ let celTemp = 0;
 
 function celciusTemp() {
   let celciusDisplay = document.querySelector("#main-temp");
-  celciusDisplay.innerHTML = `|${celTemp}°C`;
+  celciusDisplay.innerHTML = `${celTemp}°C`;
 }
 
 let celciusButton = document.querySelector("#celcius-button");
@@ -110,7 +110,7 @@ function farenheitTemp() {
   let farTemp = celTemp * 1.8 + 32;
   farTemp = Math.round(farTemp);
   let farenheitDisplay = document.querySelector("#main-temp");
-  farenheitDisplay.innerHTML = `|${farTemp}°F`;
+  farenheitDisplay.innerHTML = `${farTemp}°F`;
 }
 
 let farenheitButton = document.querySelector("#farenheit-button");
