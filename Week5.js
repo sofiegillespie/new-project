@@ -93,6 +93,7 @@ function getLocation(position) {
     getWind(response);
     getWeatherDescription(response);
     getWeatherIcon(response);
+    getForecast(response);
   });
 }
 
@@ -160,9 +161,9 @@ function displayForecast(response) {
   console.log(forecastHTML);
 }
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "5f472f11cd19ee1ec953a54c96fd4be0fcb4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+function getForecast(response) {
+  console.log(response);
+  let apiKey = `0f11cd19ee1ec953a54c96fd4be0fcb4`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
