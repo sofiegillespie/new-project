@@ -40,3 +40,7 @@
 ::placeholder {
   color: whitesmoke;
 }
+
+.forecast-image {
+  margin: auto;
+}

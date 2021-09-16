@@ -135,16 +135,16 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
-      <div class="="col card text-center" id="forecast-2">
+      <div class="col card text-center" id="forecast-2">
         ${day}
-        <img
+        <img class="forecast-image"
           src="http://openweathermap.org/img/wn/50d@2x.png"
           alt=""
           width="42"
@@ -158,3 +158,5 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
+
+displayForecast();
