@@ -32,6 +32,8 @@ let month = months[currentTime.getMonth()];
 
 function setDisplayDate() {
   let dateDisplay = document.querySelector("#date-display");
+  hours = `${hours}`.padStart(2, "0");
+  minutes = `${minutes}`.padStart(2, "0");
   let currentDate = `${day} | ${month} ${date} ${year} | ${hours}:${minutes}`;
   dateDisplay.innerHTML = currentDate;
 }
